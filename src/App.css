@@ -1,0 +1,47 @@
+body{
+    background: linear-gradient(to right, rgb(117, 173, 220), rgb(172, 125, 133));
+    height: 200vh;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.boton1{
+    background: linear-gradient(to right, rgb(153, 218, 138), rgb(227, 140, 153));
+}
+
+.card{
+    background: #4d3e35 ;
+    color: whitesmoke;
+    width: 100%;
+    margin: 10px;
+}
+td,th{
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
+
+
+@media (max-width: 30em){
+    table{
+        width: 100%;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid grey;
+        padding: 1em;
+        margin: 1em;
+    }
+    table td[data-tarea]{
+        display: flex;
+    }
+    table td[data-tarea]::before{
+        content: attr(data-tarea);
+        font-weight: bold;
+        color: silver;
+        width: 90px;
+        
+    }
+    table thead{
+        display: none;
+    }
+}
